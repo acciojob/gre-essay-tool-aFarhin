@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 
 <html>
 
@@ -8,9 +8,30 @@
 
 <body>
 	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
+<!--     <script type="text/javascript" src="./script.js">
 </script>
 
 </body>
 
+</html> --> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Real-time Word Count</title>
+</head>
+<body>
+	<h1>Real-time Word Count</h1>
+	<textarea id="evaluatedText" rows="10" cols="50" oninput="updateWordCount()"></textarea>
+	<h3 id="wordCount">0</h3>
+
+	<script>
+		function updateWordCount() {
+			let text = document.getElementById("evaluatedText").value.trim();
+			let wordCount = text.split(/\s+/).length;
+			document.getElementById("wordCount").innerHTML = wordCount;
+		}
+	</script>
+</body>
 </html>
+
