@@ -1,9 +1,15 @@
 //your code here
-function updateWordCount() {
-			let text = document.getElementById("evaluatedText").value.trim();
-			let wordCount = text.split(/\s+/).length;
-			document.getElementById("wordCount").innerHTML = wordCount;
-		}
+// function updateWordCount() {
+// 			let text = document.getElementById("evaluatedText").value.trim();
+// 			let wordCount = text.split(/\s+/).length;
+// 			document.getElementById("wordCount").innerHTML = wordCount;
+// 		}
+
+ function countWords() {
+      let text = document.getElementById("evaluatedText").value.trim();
+      let wordCount = text.length > 0 ? text.match(/\S+/g).length : 0;
+      document.getElementById("wordCount").textContent = wordCount;
+    }
 
 // function countWords() {
 //   const text = document.getElementById("evaluatedText").value;
